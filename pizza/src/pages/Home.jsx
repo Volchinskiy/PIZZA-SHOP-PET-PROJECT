@@ -6,7 +6,11 @@ export default function Home({ items }) {
     <div className="container">
       <div className="content__top">
         <Categories onClickItem={(name) => console.log(name)} items={['Мясные', 'Вегетарианская', 'Гриль', 'Острые',]} />
-        <SortPopup items={['Популярности', 'Цене', 'Алфавиту',]} />
+        <SortPopup items={[
+          { name: 'Популярности', type: 'popular'},
+          { name: 'Цена', type: 'price'},
+          { name: 'Алфавиту', type: 'alphabet'},
+        ]} />
       </div>
       <h2 className="content__title">Все пиццы</h2>
       <div className="content__items">
