@@ -7,11 +7,6 @@ import store from './redux/store';
 import './scss/app.scss';
 import App from './App';
 
-///////////////////////////
-
-
-///////////////////////////
-
 ReactDOM.render(
   <React.StrictMode>
     <Router>
