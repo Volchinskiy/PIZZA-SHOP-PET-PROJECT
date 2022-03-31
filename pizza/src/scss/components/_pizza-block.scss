@@ -1,20 +1,19 @@
 @import '../variables';
 
 .pizza-block {
- width: 280px;
+ width: 25%;
  text-align: center;
  margin-bottom: 65px;
-
- &:not(:nth-of-type(4n)) {
-  margin-right: 3.7%;
- }
+ padding: 0px 20px 0px 20px;
 
  &__image {
-  width: 260px;
+  max-width: 100%;
  }
 
  &__title {
-  font-size: 20px;
+  display: block;
+  height: 50px;
+  font-size:  calc(14px + 10 * (100vw / 2650));
   font-weight: 900;
   letter-spacing: 1%;
   margin-bottom: 20px;
@@ -40,7 +39,7 @@
     flex: 1;
     cursor: pointer;
     font-weight: 600;
-    font-size: 14px;
+    font-size:  calc(10px + 5 * (100vw / 2650));
     @include noselect();
     &.active {
      background: #ffffff;
@@ -65,8 +64,19 @@
 
  &__price {
   font-weight: bold;
-  font-size: 22px;
+  font-size: calc(14px + 5 * (100vw / 2650));
   line-height: 27px;
   letter-spacing: 0.015em;
  }
+}
+
+@media (max-width: 1023px) {
+  .pizza-block {
+    width: 33%;
+  }   
+}
+@media (max-width: 767px) {
+  .pizza-block {
+    width: 100%;
+  }   
 }

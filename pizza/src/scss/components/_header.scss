@@ -12,7 +12,7 @@
 
   &__logo {
     display: flex;
-
+    margin-bottom: 15px;
     img {
       margin-right: 15px;
     }
@@ -29,4 +29,15 @@
       color: #7b7b7b;
     }
   }
+}
+
+@media (max-width: 767px) {
+  .header {
+    &__logo {
+      margin-bottom: 15px;
+    }
+  .container {
+    display: block;
+  }
+}
 }
